@@ -1,16 +1,8 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 85633 .
-[==========] Running 6 tests from 1 test case.
+Note: Randomizing tests' orders with a seed of 67873 .
+[==========] Running 1 test from 1 test case.
 [----------] Global test environment set-up.
-[----------] 6 tests from PrintDiamond
-[ RUN      ] PrintDiamond.HandlesC
-[       OK ] PrintDiamond.HandlesC (0 ms)
-[ RUN      ] PrintDiamond.HandlesL
-[       OK ] PrintDiamond.HandlesL (0 ms)
-[ RUN      ] PrintDiamond.HandlesE
-[       OK ] PrintDiamond.HandlesE (0 ms)
-[ RUN      ] PrintDiamond.HandlesA
-[       OK ] PrintDiamond.HandlesA (0 ms)
+[----------] 1 test from PrintDiamond
 [ RUN      ] PrintDiamond.HandlesAllUppercaseLetters
 print_diamond_all.tests.cpp:31: Failure
       Expected: lines[i]
@@ -1573,4 +1565,13 @@ Asymmetry in line: 12for letter O
 Google Test trace:
 print_diamond_all.tests.cpp:12: Testing letter: O
 print_diamond_all.tests.cpp:31: Failure
-      E
+      Expected: lines[i]
+      Which is: " N                         N"
+To be equal to: reversed
+      Which is: "N                         N "
+Asymmetry in line: 13for letter O
+Google Test trace:
+print_diamond_all.tests.cpp:12: Testing letter: O
+print_diamond_all.tests.cpp:31: Failure
+      Expected: lines[i]
+     
