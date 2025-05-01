@@ -4,7 +4,7 @@
 
 class DiamondTest : public ::testing::TestWithParam<char> {
     
-    TEST(PrintDiamond, HandlesAllUppercaseLetters) {
+    TEST_P(DiamondTest, GeneratesSymmetricDiamond) {
         for(char c = 'A'; c <= 'Z'; ++c) {
             std::string diamond = print_diamond(c);
             ASSERT_FALSE(diamond.empty()) <<"Failed for letter: " << c;
