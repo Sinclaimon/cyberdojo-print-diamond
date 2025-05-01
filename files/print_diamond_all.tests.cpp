@@ -18,8 +18,7 @@ TEST(PrintDiamond, HandlesAllUppercaseLetters)
         std::vector<std::string> lines;
         std::string line;
         while (std::getline(iss, line)) {
-            while (!line.empty() && line.back() == ' ')
-                line.pop_back();
+
             lines.push_back(line);
         }
 
