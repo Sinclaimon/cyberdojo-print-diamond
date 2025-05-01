@@ -1,0 +1,78 @@
+print_diamond_all.tests.cpp:4:10: error: empty filename
+#include <>
+         ^
+print_diamond_all.tests.cpp:9:9: error: unknown type name 'AllUppercaseLetters'
+        AllUppercaseLetters,
+        ^
+print_diamond_all.tests.cpp:11:20: error: no type named 'Values' in namespace 'testing'
+        ::testing::Values(
+        ~~~~~~~~~~~^
+print_diamond_all.tests.cpp:12:14: error: expected ')'
+            a,b,c,d,e,f,g,h,i)
+             ^
+print_diamond_all.tests.cpp:11:26: note: to match this '('
+        ::testing::Values(
+                         ^
+print_diamond_all.tests.cpp:14:5: error: expected ')'
+    TEST(PrintDiamond, HandlesAllUppercaseLetters) {
+    ^
+/usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2181:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1214:72: note: expanded from macro 'GTEST_TEST_'
+#define GTEST_TEST_(test_case_name, test_name, parent_class, parent_id)\
+                                                                       ^
+print_diamond_all.tests.cpp:8:27: note: to match this '('
+    INSTANTIATE_TEST_SUITE(
+                          ^
+print_diamond_all.tests.cpp:8:5: error: C++ requires a type specifier for all declarations
+    INSTANTIATE_TEST_SUITE(
+    ^
+print_diamond_all.tests.cpp:14:5: error: use of undeclared identifier 'PrintDiamond_HandlesAllUppercaseLetters_Test'
+    TEST(PrintDiamond, HandlesAllUppercaseLetters) {
+    ^
+/usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2181:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1225:28: note: expanded from macro 'GTEST_TEST_'
+::testing::TestInfo* const GTEST_TEST_CLASS_NAME_(test_case_name, test_name)\
+                           ^
+/usr/include/gtest/internal/gtest-internal.h:1211:3: note: expanded from macro 'GTEST_TEST_CLASS_NAME_'
+  test_case_name##_##test_name##_Test
+  ^
+<scratch space>:95:1: note: expanded from here
+PrintDiamond_HandlesAllUppercaseLetters_Test
+^
+print_diamond_all.tests.cpp:14:5: error: use of undeclared identifier 'PrintDiamond_HandlesAllUppercaseLetters_Test'
+/usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2181:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1235:6: note: expanded from macro 'GTEST_TEST_'
+void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
+     ^
+/usr/include/gtest/internal/gtest-internal.h:1211:3: note: expanded from macro 'GTEST_TEST_CLASS_NAME_'
+  test_case_name##_##test_name##_Test
+  ^
+<scratch space>:103:1: note: expanded from here
+PrintDiamond_HandlesAllUppercaseLetters_Test
+^
+print_diamond_all.tests.cpp:20:1: error: expected '}'
+^
+print_diamond_all.tests.cpp:6:59: note: to match this '{'
+class DiamondTest : public ::testing::TestWithParam<char> {
+                                                          ^
+print_diamond_all.tests.cpp:19:3: error: expected ';' after class
+};
+  ^
+  ;
+10 errors generated.
+make: *** [test] Error 1
