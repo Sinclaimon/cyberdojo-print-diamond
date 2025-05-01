@@ -31,3 +31,19 @@ TEST(PrintDiamond, HandlesAllUppercaseLetters)
         }
     }
 }
+
+TEST(PrintDiamond, HandlesAnyPrintableChar)
+{
+    // Uppercase works
+    EXPECT_NO_THROW(print_diamond('A'));
+    EXPECT_NO_THROW(print_diamond('C'));
+    EXPECT_NO_THROW(print_diamond('Z'));
+
+    // Symbols
+    EXPECT_NO_THROW(print_diamond('['));  // After 'Z'
+    EXPECT_NO_THROW(print_diamond('_'));
+
+    // Digits (after 'A')
+    EXPECT_NO_THROW(print_diamond('a'));  // Treated as 'a' - 'A' steps up
+    EXPECT_NO_THROW(print_diamond('b'));
+}
