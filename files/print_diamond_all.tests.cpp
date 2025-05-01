@@ -21,5 +21,11 @@ class DiamondTest : public ::testing::TestWithParam<char> {
             }
             
             EXPECT_EQ(lines.size(), expected_lines) << "Line count mismatch for letter: " << c;
+            
+            for (size_t i = 0; i < lines.size(); ++i) {
+                std::string reversed = lines[i];
+                std::reverse(reversed.begin(), reversed.end());
+                EXPECT_EQ(lines[i], reversed) << "Asymmetry in line: " << i << "for letter " << c;
+            }
         }
 };

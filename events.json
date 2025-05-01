@@ -187,5 +187,21 @@
       19,
       944863
     ]
+  },
+  {
+    "duration": 3.662853,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 12,
+    "time": [
+      2025,
+      5,
+      1,
+      22,
+      0,
+      17,
+      733455
+    ]
   }
 ]

@@ -22,13 +22,13 @@ print_diamond_all.tests.cpp:7:5: error: non-friend class member 'TestBody' canno
 /usr/include/gtest/internal/gtest-internal.h:1235:57: note: expanded from macro 'GTEST_TEST_'
 void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-print_diamond_all.tests.cpp:25:3: error: expected '}'
+print_diamond_all.tests.cpp:31:3: error: expected '}'
 };
   ^
 print_diamond_all.tests.cpp:5:59: note: to match this '{'
 class DiamondTest : public ::testing::TestWithParam<char> {
                                                           ^
-print_diamond_all.tests.cpp:25:3: error: expected ';' after class
+print_diamond_all.tests.cpp:31:3: error: expected ';' after class
 };
   ^
   ;
