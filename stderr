@@ -1,7 +1,4 @@
-print_diamond_all.tests.cpp:4:10: error: empty filename
-#include <>
-         ^
-print_diamond_all.tests.cpp:8:5: error: non-friend class member 'test_info_' cannot have a qualified name
+print_diamond_all.tests.cpp:7:5: error: non-friend class member 'test_info_' cannot have a qualified name
     TEST(PrintDiamond, HandlesAllUppercaseLetters) {
     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
@@ -13,7 +10,7 @@ print_diamond_all.tests.cpp:8:5: error: non-friend class member 'test_info_' can
 /usr/include/gtest/internal/gtest-internal.h:1226:5: note: expanded from macro 'GTEST_TEST_'
   ::test_info_ =\
   ~~^
-print_diamond_all.tests.cpp:8:5: error: non-friend class member 'TestBody' cannot have a qualified name
+print_diamond_all.tests.cpp:7:5: error: non-friend class member 'TestBody' cannot have a qualified name
     TEST(PrintDiamond, HandlesAllUppercaseLetters) {
     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
@@ -25,15 +22,15 @@ print_diamond_all.tests.cpp:8:5: error: non-friend class member 'TestBody' canno
 /usr/include/gtest/internal/gtest-internal.h:1235:57: note: expanded from macro 'GTEST_TEST_'
 void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-print_diamond_all.tests.cpp:23:3: error: expected '}'
+print_diamond_all.tests.cpp:22:3: error: expected '}'
 };
   ^
-print_diamond_all.tests.cpp:6:59: note: to match this '{'
+print_diamond_all.tests.cpp:5:59: note: to match this '{'
 class DiamondTest : public ::testing::TestWithParam<char> {
                                                           ^
-print_diamond_all.tests.cpp:23:3: error: expected ';' after class
+print_diamond_all.tests.cpp:22:3: error: expected ';' after class
 };
   ^
   ;
-5 errors generated.
+4 errors generated.
 make: *** [test] Error 1
