@@ -1,0 +1,32 @@
+{
+  "image_name": "cyberdojofoundation/clangpp_googletest:1d77d5a",
+  "display_name": "C++ (clang++), GoogleTest",
+  "filename_extension": [
+    ".cpp",
+    ".hpp",
+    ".c",
+    ".h"
+  ],
+  "max_seconds": 10,
+  "tab_size": 4,
+  "exercise": "Print Diamond",
+  "version": 2,
+  "created": [
+    2025,
+    5,
+    1,
+    20,
+    33,
+    45,
+    574680
+  ],
+  "id": "wA6Zv3",
+  "highlight_filenames": [],
+  "progress_regexs": [],
+  "theme": "light",
+  "colour": "on",
+  "predict": "off",
+  "revert_red": "off",
+  "revert_amber": "off",
+  "revert_green": "off"
+}
