@@ -1,61 +1,36 @@
-print_diamond_all.tests.cpp:7:12: error: base class has incomplete type
-    TEST_P(DiamondTest, GeneratesSymmetricDiamond) {
-    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/gtest/gtest-param-test.h:1382:16: note: expanded from macro 'TEST_P'
-      : public test_case_name { \
-        ~~~~~~~^~~~~~~~~~~~~~
-print_diamond_all.tests.cpp:5:7: note: definition of 'DiamondTest' is not complete until the closing '}'
-class DiamondTest : public ::testing::TestWithParam<char> {
-      ^
-print_diamond_all.tests.cpp:7:5: error: non-friend class member 'gtest_registering_dummy_' cannot have a qualified name
-    TEST_P(DiamondTest, GeneratesSymmetricDiamond) {
+print_diamond_all.tests.cpp:7:5: error: non-friend class member 'test_info_' cannot have a qualified name
+    TEST(PrintDiamond, HandlesAllUppercaseLetters) {
     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/gtest/gtest-param-test.h:1405:42: note: expanded from macro 'TEST_P'
-                             test_name)::gtest_registering_dummy_ = \
-                             ~~~~~~~~~~~~^
+/usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/gtest/gtest.h:2181:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/gtest/internal/gtest-internal.h:1226:5: note: expanded from macro 'GTEST_TEST_'
+  ::test_info_ =\
+  ~~^
 print_diamond_all.tests.cpp:7:5: error: non-friend class member 'TestBody' cannot have a qualified name
-    TEST_P(DiamondTest, GeneratesSymmetricDiamond) {
+    TEST(PrintDiamond, HandlesAllUppercaseLetters) {
     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/gtest/gtest-param-test.h:1407:59: note: expanded from macro 'TEST_P'
-  void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
-       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-print_diamond_all.tests.cpp:22:3: error: expected '}'
+/usr/include/gtest/gtest.h:2187:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/gtest/gtest.h:2181:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/gtest/internal/gtest-internal.h:1235:57: note: expanded from macro 'GTEST_TEST_'
+void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+print_diamond_all.tests.cpp:25:3: error: expected '}'
 };
   ^
 print_diamond_all.tests.cpp:5:59: note: to match this '{'
 class DiamondTest : public ::testing::TestWithParam<char> {
                                                           ^
-print_diamond_all.tests.cpp:7:5: error: 'AddToRegistry' is a private member of 'DiamondTest::DiamondTest_GeneratesSymmetricDiamond_Test'
-    TEST_P(DiamondTest, GeneratesSymmetricDiamond) {
-    ^
-/usr/include/gtest/gtest-param-test.h:1406:58: note: expanded from macro 'TEST_P'
-      GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::AddToRegistry(); \
-                                                         ^
-print_diamond_all.tests.cpp:7:5: note: declared private here
-/usr/include/gtest/gtest-param-test.h:1387:16: note: expanded from macro 'TEST_P'
-    static int AddToRegistry() { \
-               ^
-In file included from print_diamond_all.tests.cpp:1:
-In file included from /usr/include/gtest/gtest.h:62:
-In file included from /usr/include/gtest/gtest-param-test.h:192:
-/usr/include/gtest/internal/gtest-param-util.h:446:53: error: no type named 'ParamType' in 'DiamondTest::DiamondTest_GeneratesSymmetricDiamond_Test'
-    : public TestMetaFactoryBase<typename TestCase::ParamType> {
-                                 ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
-print_diamond_all.tests.cpp:7:5: note: in instantiation of template class 'testing::internal::TestMetaFactory<DiamondTest::DiamondTest_GeneratesSymmetricDiamond_Test>' requested here
-    TEST_P(DiamondTest, GeneratesSymmetricDiamond) {
-    ^
-/usr/include/gtest/gtest-param-test.h:1395:27: note: expanded from macro 'TEST_P'
-                      new ::testing::internal::TestMetaFactory< \
-                          ^
-In file included from print_diamond_all.tests.cpp:1:
-In file included from /usr/include/gtest/gtest.h:62:
-In file included from /usr/include/gtest/gtest-param-test.h:192:
-/usr/include/gtest/internal/gtest-param-util.h:448:30: error: no type named 'ParamType' in 'DiamondTest::DiamondTest_GeneratesSymmetricDiamond_Test'
-  typedef typename TestCase::ParamType ParamType;
-          ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
-print_diamond_all.tests.cpp:22:3: error: expected ';' after class
+print_diamond_all.tests.cpp:25:3: error: expected ';' after class
 };
   ^
   ;
-8 errors generated.
+4 errors generated.
 make: *** [test] Error 1

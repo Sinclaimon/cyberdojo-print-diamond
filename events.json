@@ -171,5 +171,21 @@
       50,
       376873
     ]
+  },
+  {
+    "duration": 3.643835,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 11,
+    "time": [
+      2025,
+      5,
+      1,
+      21,
+      58,
+      19,
+      944863
+    ]
   }
 ]
