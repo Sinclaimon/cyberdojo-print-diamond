@@ -27,5 +27,21 @@
       48,
       992633
     ]
+  },
+  {
+    "duration": 2.54578,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 2,
+    "time": [
+      2025,
+      5,
+      1,
+      20,
+      35,
+      50,
+      651801
+    ]
   }
 ]

@@ -35,7 +35,7 @@ std::string print_diamond(char max_letter)
         
         
         int line_width = 2 * n + 1;
-        while (line.length() < line_width) 
+        while (int<line.length()> < line_width) 
         {
             line += ' ';
         }
