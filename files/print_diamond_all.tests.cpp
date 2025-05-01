@@ -1,5 +1,8 @@
 #include <gtest/gtest.h>
 #include <string>
+#include <sstream>
+#include <vector>
+#include <algorithm>
 #include <print_diamond.hpp>
 
 class DiamondTest : public ::testing::TestWithParam<char> {
